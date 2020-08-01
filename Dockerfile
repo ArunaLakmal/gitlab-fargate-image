@@ -39,7 +39,8 @@ RUN curl -Lo /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.ama
     chmod +x /usr/local/bin/gitlab-runner && \
     gitlab-runner --version
 
-RUN apt-get install -y git-lfs && \
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && \
+    apt-get install -y git-lfs && \
     git lfs install --skip-repo
 
 RUN curl https://omnitruck.chef.io/install.sh | bash -s -- -P inspec
