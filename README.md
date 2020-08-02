@@ -1,2 +1,2 @@
 # gitlab-fargate-image
-GitLab CI Fargate Image
+GitLab CI Fargate Image build
